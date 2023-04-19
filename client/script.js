@@ -174,7 +174,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from server -> bot's response 
   //after setting up backend, then we are coding this
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://quic-assistant.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
