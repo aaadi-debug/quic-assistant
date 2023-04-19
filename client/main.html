@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quic Assistant | Your AI...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    
+      <div id="app">
+
+        <div id="chat_container">
+          
+
+
+        </div>  
+        <!-- select Voice: -->
+        <select name="" id="voice_list"></select> 
+        <br><br>
+          <!-- <i class="fa-solid fa-volume-high" style="color: #ffffff;"></i>
+          <br>
+          <i class="fa-solid fa-volume-xmark" style="color: #ffffff;"></i>
+          <br> -->
+        
+        <button id="btn_speak">speak</button>
+
+        <form>
+          <textarea id="speech_to_text" class="text_to_speech" name="prompt" cols="1" rows="1" placeholder="Ask Quic Assistant..."></textarea>
+
+
+          <!-- <button> <i class="fa-solid fa-microphone fa-xl" style="color: #8d5315;"></i> </button> -->
+        </form>
+
+      </div>
+
+    
+    <script type="module" src="script.js"></script>
+    <script type="module" src="speech_recognition.js"></script>
+    <!-- <script src="speech_synthesis.js" defer></script> -->
+    <script src="lens.js" defer></script>
+
+  </body>
+</html>

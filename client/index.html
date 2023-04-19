@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quic Assistant | Your AI...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <div class="elementor">
+        <div class="elementor-wrapper">
+          <div class="elementor-section-one">
+            <div class="elementor-section-one-content">
+              <h1> Quic <span class="typing_text">Assistant</span> </h1>
+              <h4>Quic Assistant model is pre-trained on large datasets of text from  various sources, such as web pages, books, and social media posts.  This pre-training allows the model to learn the nuances of language  and develop a broad understanding of the world. After pre-  training, the model is fine-tuned on a specific task, such as  conversational response generation.
+              </h4>
+              <button id="visit_btn" type="submit">
+                <a href="./main.html" target="_blank"><i class="fa-solid fa-arrow-right fa-2xl"></i></a>
+                <!-- <i class="fa-sharp fa-solid fa-circle-arrow-right fa-2xl"></i>  -->
+              </button>
+            </div>
+            <div class="elementor-section-one-image">
+              <!-- <img src="./assets/human_robo.jpg" alt=""> -->
+              <img src="./assets/" alt="">
+            </div>
+          </div>
+          <div class="elementor-section-two">
+            <img src="./assets/man-g3a0b0f2b2_1920.png" alt="">
+          </div>
+        </div>
+    </div>
+    
+    <script>
+      // button icon change effect
+      const btn = document.querySelector('#visit_btn');
+      const btnIcon = btn.querySelector('i');
+
+      btn.addEventListener("mouseover", changeIconBtn);
+      
+      function changeIconBtn() {
+          if(btnIcon.classList.contains("fa-arrow-right")) { 
+              btnIcon.classList.remove("fa-arrow-right");
+              btnIcon.classList.add("fa-circle-arrow-right");
+              btnIcon.style.marginRight = "-10px";
+          }
+      }
+      btn.addEventListener("mouseout", toggleIcon);
+      function toggleIcon() {
+          if(btnIcon.classList.contains("fa-circle-arrow-right")) {  
+              btnIcon.classList.remove("fa-circle-arrow-right");
+              btnIcon.classList.add("fa-arrow-right");
+              btnIcon.style.marginRight = "10px";
+          }
+      }
+    </script>
+   
+
+    
+    <script type="module" src="script.js"></script>
+    <script type="module" src="speech_recognition.js"></script>
+    <!-- <script src="speech_synthesis.js" defer></script> -->
+    <script src="lens.js" defer></script>
+
+  </body>
+</html>
